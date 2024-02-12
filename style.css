@@ -48,75 +48,116 @@ nav {
   align-items: center;
   justify-content: center;
 }
+
 .menuItem {
   margin-right: 50px;
   cursor: pointer;
   color: lightgray;
   font-weight: 400;
 }
-
-.slider{
-  background: url('https://source.unsplash.com/black-and-white-brick-wall-9a58YsGiTPk');
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
-  overflow: hidden;
-  padding-left: 10rem;
+/* .......................................... */
+.slider {
+  background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  overflow: hidden; */
 }
-.slideWrapper{
+
+.sliderWrapper {
   display: flex;
-  flex-wrap: nowrap;
-  
-
+  width: 500vw;
+  transition: all 1.5s ease-in-out;
 }
-#sliderItem{
+
+.sliderItem {
+  width: 100vw;
   display: flex;
-  flex-direction: row;
-  position: relative;/*for price*/
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
-  
- 
-}
-#sliderItem img{
-  z-index: 1;
-}
-#sliderItem .sliderCirlce{
+.sliderBg {
   width: 750px;
   height: 750px;
-  background-color: #369E62;
   border-radius: 50%;
-  position: absolute; /*make full circle*/
-}
-.sliderTitle{
-  color: white;
   position: absolute;
-  font-size: 3.5rem;
-  top: 10%;
-  right: 8%;
+}
+
+.sliderImg {
   z-index: 1;
-  text-align: center;
-  line-height: 4rem;
-
 }
-.sliderPrice{
-  color:#369E62;
-  font-size: 3rem;
+
+.sliderTitle {
   position: absolute;
-  border: solid 1px gray;
   top: 10%;
-  left: -10%;
-  padding: 10px;
-  font-weight: 100;
-  
-}
-#sliderItem button{
-  position: absolute;
-  bottom: 20%;
   right: 10%;
-  background-color: black;
-  border: solid 1px gray;
-  font-size: 2rem;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
   color: white;
-  padding: 10px 20px;
-  font-weight: 700;
-  z-index: 1000;
-
+  z-index: 1;
 }
+
+.sliderPrice {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 60px;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  border: 1px solid gray;
+  z-index: 1;
+}
+
+.buyButton {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  border: 1px solid gray;
+  background-color: black;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.buyButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.sliderItem:nth-child(1) .sliderBg {
+  background-color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderBg {
+  background-color: rebeccapurple;
+}
+.sliderItem:nth-child(3) .sliderBg {
+  background-color: teal;
+}
+.sliderItem:nth-child(4) .sliderBg {
+  background-color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderBg {
+  background-color: rgb(124, 115, 80);
+}
+
+.sliderItem:nth-child(1) .sliderPrice {
+  color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderPrice {
+  color: #663399;
+}
+.sliderItem:nth-child(3) .sliderPrice {
+  color: teal;
+}
+.sliderItem:nth-child(4) .sliderPrice {
+  color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderPrice {
+  color: cornsilk;
+}
+
+/* ......................... */
