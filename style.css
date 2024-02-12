@@ -1,11 +1,122 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: #111;
+  color: white;
+  padding: 20px 50px;
+}
+
+.navTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: gray;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.searchInput {
+  border: none;
+  background-color: transparent;
+}
+
+.searchInput::placeholder {
+  color: lightgray;
+}
+
+.limitedOffer {
+  font-size: 20px;
+  border-bottom: 2px solid green;
+  cursor: pointer;
+}
+
+.navBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menuItem {
+  margin-right: 50px;
+  cursor: pointer;
+  color: lightgray;
+  font-weight: 400;
+}
+
 .slider{
-  background:url('https://source.unsplash.com/pink-petaled-flower-YdAqiUkUoWA');
-  width:100%;
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-origin: content-box;
-  background-size: cover;
-  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  background: url('https://source.unsplash.com/black-and-white-brick-wall-9a58YsGiTPk');
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  overflow: hidden;
+  padding-left: 10rem;
+}
+.slideWrapper{
+  display: flex;
+  flex-wrap: nowrap;
+  
+
+}
+#sliderItem{
+  display: flex;
+  flex-direction: row;
+  position: relative;/*for price*/
+
+  
+ 
+}
+#sliderItem img{
+  z-index: 1;
+}
+#sliderItem .sliderCirlce{
+  width: 750px;
+  height: 750px;
+  background-color: #369E62;
+  border-radius: 50%;
+  position: absolute; /*make full circle*/
+}
+.sliderTitle{
+  color: white;
+  position: absolute;
+  font-size: 3.5rem;
+  top: 10%;
+  right: 8%;
+  z-index: 1;
+  text-align: center;
+  line-height: 4rem;
+
+}
+.sliderPrice{
+  color:#369E62;
+  font-size: 3rem;
+  position: absolute;
+  border: solid 1px gray;
+  top: 10%;
+  left: -10%;
+  padding: 10px;
+  font-weight: 100;
+  
+}
+#sliderItem button{
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  background-color: black;
+  border: solid 1px gray;
+  font-size: 2rem;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 700;
+  z-index: 1000;
 
 }
